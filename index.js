@@ -11,8 +11,7 @@ const port = 4577;
 	PG Init
 */
 const client = new Client({
-	user: 'postgres',
-	database: 'daeyoon',
+	connectionString: process.env.DATABASE_URL,
 	port: 5432
 });
 client.connect();
